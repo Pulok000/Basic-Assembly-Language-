@@ -1,0 +1,36 @@
+.MODEL
+.STACK 100H
+.DATA
+
+MSG1 DB "LAMIA RAHMAN",0DH,0AH,24H
+MSG2 DB "LAMIA RAHMAN 2",0DH,0AH,24H  
+
+
+
+.CODE
+MAIN PROC
+    
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    
+    ;PRINTING MESSAGE1 (19-21)
+    
+    LEA DX,MSG1
+    MOV AH,09H
+    INT 21H
+
+    ;PRINTING MESSAGE2 (24-26)    
+    LEA DX,MSG2
+    MOV AH,09H
+    INT 21H
+    
+    
+
+    MOV AH,4CH
+    INT 21H
+    
+    
+    
+    MAIN ENDP
+END MAIN

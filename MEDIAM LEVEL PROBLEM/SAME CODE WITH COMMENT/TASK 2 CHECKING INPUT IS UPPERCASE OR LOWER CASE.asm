@@ -1,0 +1,78 @@
+.MODEL SMALL
+.STACK 100H
+.DATA  
+NEWLINE DB "",0AH,0DH,24H
+
+MSG1 DB "UPPER CASE CHARACTER.",0AH,0DH,24H
+MSG2 DB "LOWER CASE CHARACTER.",0AH,0DH,24H
+MSG3 DB "ERROR.INVALID INPUT.NOT A CHARACTER.",0AH,0DH,24H 
+
+.CODE
+
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    MOV AH,01H
+    INT 21H
+    MOV BL,AL
+    
+    ;PRINTING A ENTER AFTER USER INPUT
+    LEA DX,NEWLINE
+    MOV AH,09H
+    INT 21H 
+     
+    
+    CMP BL,41H
+    JGE UPPER
+    
+    JMP INVALID
+    
+    
+    UPPER:
+    ;SEND TO LOWER IF NOT UPPER
+    CMP BL,5AH
+    JG LOWER
+     
+
+    ;DISPLAY
+    LEA DX,MSG1
+    MOV AH,09H
+    INT 21H
+    
+    ;EXIT
+    JMP EXIT
+    
+    LOWER:
+    
+    CMP BL,61H
+    JL INVALID
+    
+    CMP BL,7AH
+    JG INVALID
+    
+
+
+    ;DISPLAY
+    LEA DX,MSG2
+    MOV AH,09H
+    INT 21H
+    
+    ;EXIT
+    JMP EXIT   
+    
+    
+    INVALID:
+  
+    ;DISPLAY MESSAGE FOR INVALID CHARACTER     
+    LEA DX,MSG3
+    MOV AH,09H
+    INT 21H    
+    
+    
+    
+    EXIT:
+    MOV AH,4CH
+    INT 21H
+    MAIN ENDP
+END MAIN

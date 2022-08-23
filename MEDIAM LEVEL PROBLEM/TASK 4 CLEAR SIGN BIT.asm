@@ -1,0 +1,25 @@
+.MODEL SMALL
+.STACK 100H
+.DATA 
+
+.CODE
+
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+
+    MOV BL,10101001B
+ 
+    
+    CONVERT:
+    
+    AND BL,01111111B
+  
+
+    EXIT: 
+    MOV AH,4CH
+    INT 21H
+    
+    MAIN ENDP
+END MAIN  

@@ -1,0 +1,40 @@
+.MODEL SMALL
+.STACK 100H
+.DATA  
+
+.CODE
+
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    MOV BX,0H
+    
+    MOV AH,01H
+    INT 21H
+    
+    START:
+    ;()LOOP EXIT CONDITION
+    CMP AL,0DH
+    JE EXIT
+    
+    ;() CONVERTING ASSCI INPUT TO 0 OR 1 DEGIT
+    SUB AL,30H
+    
+    
+    ;() STSORING THE VALUE IN BL
+    SHL BX,1
+    OR BL,AL 
+    
+    ;() TAKING INPUT
+    MOV AH,01H
+    INT 21H    
+    
+    JMP START 
+    
+    
+    EXIT:
+    MOV AH,4CH
+    INT 21H
+    MAIN ENDP
+END MAIN

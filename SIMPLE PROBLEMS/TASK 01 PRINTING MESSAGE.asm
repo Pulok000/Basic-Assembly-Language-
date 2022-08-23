@@ -1,0 +1,25 @@
+.MODEL
+.STACK 100H
+.DATA
+MSG1 DB "PULOK,NILOY AHMED",0DH,0AH,24H
+MSG2 DB "ID: 19-39755-1",0DH,0AH,24H
+
+.CODE
+MAIN PROC
+    
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    LEA DX,MSG1
+    MOV AH,09H
+    INT 21H
+    
+    
+    LEA DX,MSG2
+    MOV AH,09H
+    INT 21H
+    
+    
+    
+    MAIN ENDP
+END MAIN
