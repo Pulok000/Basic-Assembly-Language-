@@ -40,7 +40,8 @@
 
 ## Thank You
 
-[![Stargazers repo roster for @Pulok000/Basic-Assembly-Language](https://reporoster.com/stars/Pulok000/Basic-Assembly-Language)](https://github.com/Pulok000/Basic-Assembly-Language-/stargazers)
-## For your Support ❤️
+## Thank You
 
+[![Stargazers repo roster for @Pulok000/Basic-Assembly-Language-](https://reporoster.com/stars/Pulok000/Basic-Assembly-Language-)](https://github.com/Pulok000/Basic-Assembly-Language-/stargazers)
+## For your Support ❤️
 
