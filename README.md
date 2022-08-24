@@ -1,5 +1,5 @@
 # BASIC ASSEMBLY LANGUAGE
-Table of Contents:
+<b>Table of Contents:<b>
 
 <b>BASIC CODES:</b>
 1. TEMPLETE.asm
