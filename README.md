@@ -38,7 +38,7 @@
 9. TASK 09 FIND SUM OF 4 NUMERS.asm
 10. TASK 10 FIND SUM OF TWO NUMBER.asm
 
-If it helps you anyway, you can show your appreciation by giving a star to this repository.
+<b>If it helps you anyway, you can show your appreciation by giving a star to this repository.</b>
 
 ## Thank You
 
