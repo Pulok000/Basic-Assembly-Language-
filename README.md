@@ -38,6 +38,9 @@
 9. TASK 09 FIND SUM OF 4 NUMERS.asm
 10. TASK 10 FIND SUM OF TWO NUMBER.asm
 
+## Thank You
 
+[![Stargazers repo roster for @Pulok000/Basics-Assembly-Language](https://reporoster.com/stars/Pulok000/Basics-Assembly-Language)](https://github.com/Pulok000/Basics-Assembly-Language-/stargazers)
+## For your Support ❤️
 
 
